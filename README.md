@@ -10,4 +10,4 @@
  * CSS
 
 # Author 📗
- * Github: (https://github.com/elassis)
+ * Github: [@elassis](https://github.com/elassis)
