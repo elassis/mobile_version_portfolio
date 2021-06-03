@@ -5,5 +5,9 @@
  * Create my own portfolio using HTML & CSS 💻.
  * Put in practices all the knowledge received so far.
 
+# Built With ⚒️
+ * HTMl
+ * CSS
+
 # Author 📗
- * @elassis
+ * Github: [@elassis](https://github.com/elassis)
