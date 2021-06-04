@@ -10,6 +10,7 @@ header {
   padding: 0 20px;
   justify-content: space-between;
   min-height: 5vh;
+  
 }
 
 header > * {
@@ -117,4 +118,134 @@ ul {
   height: 10px;
   left: 128px;
   top: 111px;
+}
+/*work section*/
+.work{
+  display:grid;
+  width: 95%;
+  margin-top:15%; 
+  grid-template-rows: 650px 700px 650px 700px;
+  padding: 50px 10px 10px 10px;
+  background-color: #e5e5e5;
+  row-gap: 100px;
+}
+
+.project{
+  background-color: white;
+  margin-top:10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 19px;
+  color:white;
+  text-align: center;
+  border-radius: 10px;
+  border:1px solid #e0e0e0;
+}
+.screenshot{
+  height:fit-content;
+}
+.screenshot >img{
+  width: 100%;
+}
+.project-name{
+  
+  text-align: left;
+ margin-top: 5px;
+  font-style: normal;
+font-weight:bolder;
+font-size: 42px;
+line-height: 44px;
+color:#172b4d;
+text-transform: capitalize;
+}
+
+.meta{
+  margin-top: -33px;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+}
+.meta > *{
+  padding-right: 10px;
+}
+.meta > img{
+  width: 8px;
+  height: 8px;
+  align-self: center;
+  margin-top:-3px;
+}
+.meta > :first-child{
+  text-transform: uppercase;
+  color:#344563;
+  font-weight: bolder;
+}
+.meta >:nth-child(3){
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+text-transform: capitalize;
+color:#7a869a
+}
+
+.meta >:nth-child(5){
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color:#7a869a;
+  }
+.second-text{
+ 
+  margin-top: -3px;
+  height: fit-content;
+  color: #344563;
+  text-align: left;
+}
+.tools{
+  display: flex;
+  justify-content: space-between;
+  width:80%;
+  margin-top: -10px;
+  height: fit-content; 
+  
+}
+.tools > p{
+  padding: 0 12px;
+  color: #6070FF;
+  background-color: #EBEBFF ;
+ border-radius: 8px;
+}
+
+.button{
+  display: block;
+  text-decoration: none;
+  background-color: white;
+  color:#396DF2;
+  border:1px solid #396DF2;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.button:hover{
+  color:white;
+  background-color: #6070FF;
+}
+.button:active{
+  background-color:#2230D2;
+  color:white;
+}
+.buton:disabled{
+  color:#5E6C84;
+  border-color: #5E6C84;
 }
