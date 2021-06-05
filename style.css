@@ -62,11 +62,14 @@ main {
 .social {
   display: flex;
   margin-top: -2%;
-  width: 20%;
+  margin: 0;
+  padding: 0;
+  width: 30%;
   justify-content: space-between;
+  
 }
 
-.social > img {
+.social > li > img {
   height: 25px;
 }
 
@@ -210,15 +213,18 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  margin:0;
+  padding: 0;
   margin-top: -10px;
 }
 
-.tools > p {
+.tools > li {
   padding: 0 12px;
   color: #6070ff;
   background-color: #ebebff;
   border-radius: 8px;
 }
+
 
 .button {
   display: block;
@@ -252,7 +258,7 @@ ul {
 
 /* about code */
 .about {
-  background-color: #e5e5e5;
+  background-color: white;
   display: grid;
   grid-template-rows: auto auto 70px 70px;
 }
@@ -261,17 +267,21 @@ ul {
 .languagues,
 .frameworks,
 .skills {
-  background-color: #fff;
+  background-color: white;
 }
 
 .about > .wrapper {
   padding: 50px 20px 20px 20px;
 }
-
+.technologies{
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
 .languagues {
   display: grid;
   padding: 0 32px 32px 32px;
-  margin-top: -70px;
+  margin-top: -10px;
   grid-template-rows: 80px 70px 70px 70px;
   grid-template-areas:
     'title'
@@ -293,7 +303,7 @@ ul {
 .title {
   grid-area: title;
   display: grid;
-  grid-template-columns: 85% 15%;
+  grid-template-columns:85% 15%;
 }
 
 .title > span {
@@ -316,6 +326,10 @@ ul {
   grid-template-columns: 90% 10%;
 }
 
+.child-ul{
+  margin: 0;
+  padding:10px;
+}
 .child-languagues {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -323,6 +337,6 @@ ul {
 
 .frameworks,
 .skills {
-  padding: 0 32px 32px 32px;
+  padding-left: 30px ;
   border-bottom: 1px solid #e5e5e5;
 }
