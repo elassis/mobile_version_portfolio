@@ -121,7 +121,7 @@ ul {
   display: grid;
   width: 95%;
   margin-top: 15%;
-  grid-template-rows: 650px 700px 650px 700px;
+  grid-template-rows: 580px 630px 580px 630px;
   padding: 50px 10px 10px 10px;
   background-color: #e5e5e5;
   row-gap: 100px;
