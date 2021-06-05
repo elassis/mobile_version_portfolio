@@ -61,16 +61,10 @@ main {
 
 .social {
   display: flex;
-  margin-top: -2%;
   margin: 0;
   padding: 0;
   width: 30%;
   justify-content: space-between;
-  
-}
-
-.social > li > img {
-  height: 25px;
 }
 
 ul {
@@ -179,6 +173,10 @@ ul {
   margin-top: -3px;
 }
 
+.social > li > img {
+  height: 25px;
+}
+
 .meta > :first-child {
   text-transform: uppercase;
   color: #344563;
@@ -213,7 +211,7 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin:0;
+  margin: 0;
   padding: 0;
   margin-top: -10px;
 }
@@ -224,7 +222,6 @@ ul {
   background-color: #ebebff;
   border-radius: 8px;
 }
-
 
 .button {
   display: block;
@@ -273,11 +270,13 @@ ul {
 .about > .wrapper {
   padding: 50px 20px 20px 20px;
 }
-.technologies{
+
+.technologies {
   margin: 0;
   padding: 0;
   background-color: red;
 }
+
 .languagues {
   display: grid;
   padding: 0 32px 32px 32px;
@@ -303,7 +302,7 @@ ul {
 .title {
   grid-area: title;
   display: grid;
-  grid-template-columns:85% 15%;
+  grid-template-columns: 85% 15%;
 }
 
 .title > span {
@@ -326,10 +325,11 @@ ul {
   grid-template-columns: 90% 10%;
 }
 
-.child-ul{
+.child-ul {
   margin: 0;
-  padding:10px;
+  padding: 10px;
 }
+
 .child-languagues {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -337,6 +337,6 @@ ul {
 
 .frameworks,
 .skills {
-  padding-left: 30px ;
+  padding-left: 30px;
   border-bottom: 1px solid #e5e5e5;
 }
