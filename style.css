@@ -421,11 +421,11 @@ ul {
   position: absolute;
 }
 
-#ellipse-12-2 {
+.ellipse-12-2 {
   margin-left: 105px;
 }
 
-#ellipse-3-w {
+.ellipse-3-w {
   position: absolute;
   width: 40px;
   height: 79px;
@@ -433,19 +433,19 @@ ul {
   transform: rotate(5deg);
 }
 
-#rect-4-d {
+.rect-4-d {
   position: absolute;
   left: 260px;
   top: -20px;
 }
 
-#ellipse-5-w {
+.ellipse-5-w {
   position: absolute;
   top: 625px;
   left: 200px;
 }
 
-#rect-7-2 {
+.rect-7-2 {
   position: absolute;
   top: 600px;
   left: 200px;
