@@ -421,47 +421,12 @@ ul {
   position: absolute;
 }
 
-.ellipse-12-2 {
+.shapes {
   position: absolute;
+  background-image: url('elements/shapes.png');
+  width: 265px;
+  height: 709.17px;
   background-repeat: no-repeat;
-  background-image: url('elements/ellipse-12-2.png');
-  width: 100px;
-  height: 100px;
-  margin-left: 110px;
-}
-
-.ellipse-3-w {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url('elements/ellipse-3-white.png');
-  width: 100px;
-  height: 100px;
-  margin: -43px 266px;
-}
-
-.rect-4-d {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url('elements/rectangle-4-dark.png');
-  width: 100px;
-  height: 100px;
-  margin: -70px 246px;
-}
-
-.ellipse-5-w {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url('elements/ellipse-5-white.png');
-  width: 100px;
-  height: 100px;
-  margin: 655px 186px;
-}
-
-.rect-7-2 {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url('elements/rectangle-7-2.png');
-  width: 100px;
-  height: 100px;
-  margin: 625px 185px;
+  left: 153px;
+  top: 4620px;
 }
