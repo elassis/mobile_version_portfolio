@@ -416,18 +416,21 @@ ul {
   color: #6070ff;
   text-transform: capitalize;
 }
-.contact-button:hover{
+
+.contact-button:hover {
   background-color: white;
   color: #6070ff;
 }
-.contact-button:active{
+
+.contact-button:active {
   background-color: white;
-  color: #2230D2;
+  color: #2230d2;
 }
-.contact-button:disabled{
+
+.contact-button:disabled {
   background-color: white;
-  border:1px solid #5E6C84;
-  color: #5E6C84;
+  border: 1px solid #5e6c84;
+  color: #5e6c84;
 }
 
 .contact-form > ul > li {
