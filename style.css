@@ -352,7 +352,7 @@ ul {
 .contact-form > form {
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 390px;
   justify-content: space-between;
 }
 
@@ -422,31 +422,46 @@ ul {
 }
 
 .ellipse-12-2 {
-  margin-left: 105px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url('elements/ellipse-12-2.png');
+  width: 100px;
+  height: 100px;
+  margin-left: 110px;
 }
 
 .ellipse-3-w {
   position: absolute;
-  width: 40px;
-  height: 79px;
-  left: 290px;
-  transform: rotate(5deg);
+  background-repeat: no-repeat;
+  background-image: url('elements/ellipse-3-white.png');
+  width: 100px;
+  height: 100px;
+  margin: -43px 266px;
 }
 
 .rect-4-d {
   position: absolute;
-  left: 260px;
-  top: -20px;
+  background-repeat: no-repeat;
+  background-image: url('elements/rectangle-4-dark.png');
+  width: 100px;
+  height: 100px;
+  margin: -70px 246px;
 }
 
 .ellipse-5-w {
   position: absolute;
-  top: 625px;
-  left: 200px;
+  background-repeat: no-repeat;
+  background-image: url('elements/ellipse-5-white.png');
+  width: 100px;
+  height: 100px;
+  margin: 655px 186px;
 }
 
 .rect-7-2 {
   position: absolute;
-  top: 600px;
-  left: 200px;
+  background-repeat: no-repeat;
+  background-image: url('elements/rectangle-7-2.png');
+  width: 100px;
+  height: 100px;
+  margin: 625px 185px;
 }
