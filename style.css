@@ -416,6 +416,19 @@ ul {
   color: #6070ff;
   text-transform: capitalize;
 }
+.contact-button:hover{
+  background-color: white;
+  color: #6070ff;
+}
+.contact-button:active{
+  background-color: white;
+  color: #2230D2;
+}
+.contact-button:disabled{
+  background-color: white;
+  border:1px solid #5E6C84;
+  color: #5E6C84;
+}
 
 .contact-form > ul > li {
   position: absolute;
@@ -424,9 +437,9 @@ ul {
 .shapes {
   position: absolute;
   background-image: url('elements/shapes.png');
-  width: 265px;
+  width: 215px;
   height: 709.17px;
   background-repeat: no-repeat;
-  left: 153px;
+  left: 159px;
   top: 4620px;
 }
