@@ -384,70 +384,7 @@ color: #253858;
   height: 50px;
   margin:auto;
 }
-/*
-.languagues {
-  display: grid;
-  padding: 0 32px 32px 32px;
-  margin-top: -10px;
-  grid-template-rows: 80px 70px 70px 70px;
-  grid-template-areas:
-    'title'
-    'js'
-    'html'
-    'css';
-  border-bottom: 1px solid #e5e5e5;
-}
 
-.languagues > .title > p,
-.frameworks > .title > p,
-.skills > .title > p {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.title {
-  grid-area: title;
-  display: grid;
-  grid-template-columns: 85% 15%;
-}
-
-.title > span {
-  margin-top: 27px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 24px;
-  transform: rotate(90deg);
-  color: #acb7c3;
-}
-
-.frameworks > .title > span,
-.skills > .title > span {
-  transform: rotate(0deg);
-}
-
-.frameworks > .title,
-.skills > .title {
-  grid-template-columns: 90% 10%;
-}
-
-.child-ul {
-  margin: 0;
-  padding: 10px;
-}
-
-.child-languagues {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-
-.frameworks,
-.skills {
-  padding-left: 30px;
-  border-bottom: 1px solid #e5e5e5;
-}
 /**********************contact section code****************************/
 
 .contact-form {
