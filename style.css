@@ -359,7 +359,7 @@ ul {
 
 .child-lang {
   display: grid;
-  grid-template-columns: 20% 80%;  
+  grid-template-columns: 20% 80%;
   text-align: center;
 }
 
@@ -488,15 +488,15 @@ ul {
   nav > .fa-bars {
     display: none;
   }
-  
+
   nav > .navbar {
     display: flex;
   }
-  
+
   main {
     min-height: 50vh;
   }
-  
+
   .wrapper {
     position: relative;
     width: 800px;
