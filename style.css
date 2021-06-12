@@ -206,6 +206,13 @@ a.button {
   border: 1px solid #396df2;
   padding: 16px;
   border-radius: 10px;
+  transition: all 1s ease-in-out;
+  display: block;
+}
+
+a.button:hover {
+  margin-top: -10px;
+  transform: scale(1.05);
 }
 
 .button:hover {
@@ -368,6 +375,11 @@ a.about-button {
   padding: 24px;
   height: 30px;
   font-size: 17px;
+}
+
+.input:hover {
+  transition: 0.4s ease-in-out;
+  transform: translate(10px);
 }
 
 .textarea {
@@ -715,6 +727,8 @@ a.about-button {
   a.button {
     font-size: 18px;
   }
+
+
 
   .about-title {
     font-size: 55px;
