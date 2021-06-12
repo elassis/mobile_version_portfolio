@@ -11,25 +11,27 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="elements/my-logo.png" alt="logo">
-        </div>
-        <nav>
+    <header class="header">
+            <img src="elements/my-logo.png" alt="logo" class="img-logo">            
+        <nav class="nav">
             <ul class="navbar">
-                <li><a href="#" target="_blank" rel="noopener noreferrer">portfolio</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">about</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">contact</a></li>
-            </ul>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>       
+            <i class="fas fa-bars icon-element"></i>
         </nav>
+     
     </header>
-    <main>
-        <span class="shapes-desktop"></span>
-          <div class="wrapper">              
-            <h2 class="primary-text">I'm Enmanuel Glad to see you!</h2>
+    <main class="main">
+        
+        <div class="wrapper">
+            <h1 class="primary-text">I'm Enmanuel,</h1>
+            <h2 class="primary-text float">Glad to see</h2>
+            <h3 class="primary-text you">you!</h3>
             <p class="secondary-text">Im a software Developer!, I can help you build a product, feature or website look through some of my work and experience! 
                 If you like what you see and have a project you need coded,don't hesitate to contact me.</p>
-            <p class="third-text">let's connect</p>
+            <p id="third-text">let's connect</p>
             <div id="social">
                 <img src="elements/twitter-icon.png" alt="twitter-icon">
                 <img src="elements/github-icon.jpg" alt="github-icon">   
@@ -37,12 +39,10 @@
           </div>
     </main>
 
-    <section>
+    <section class="work-wrapper">
       <ul class="work">
-        <li class="project">
-            <div class="screenshot">
-                <img src="elements/snap1-desktop.png" alt="snapshoot-1">
-            </div>
+        <li class="project">           
+                <img src="elements/snapshoot.png" alt="snapshoot-1">            
             <div class="project-info">
                 <h2 class="project-name">tonic</h2>
                 <div class="meta">
@@ -61,10 +61,13 @@
                     <li>javascript</li>
                 </ul>
                 <a href="#" class="button" target="_blank" rel="noopener noreferrer">see project</a>
-            </div>
+         </div>
         </li>
         <li class="project">
-          <div class="project-info">
+            
+                <img src="elements/snapshoot-2.png" alt="snapshoot-1">
+           
+            <div class="project-info">
             <h2 class="project-name">multi-post stories</h2>
             <div class="meta">
                 <p>canopy</p>
@@ -82,15 +85,12 @@
                 <li>javascript</li>
             </ul>
             <a href="#" class="button" target="_blank" rel="noopener noreferrer">see project</a>
-          </div>
-            <div class="screenshot">
-                <img src="elements/snapshoot-2.png" alt="snapshoot-1">
-            </div>
+        </div>
         </li>
         <li class="project">
-            <div class="screenshot">
+            
                 <img src="elements/snapshoot-3.png" alt="snapshoot-1">
-            </div>
+            
             <div class="project-info">
             <h2 class="project-name">tonic</h2>
             <div class="meta">
@@ -109,10 +109,13 @@
                 <li>javascript</li>
             </ul>
             <a href="#" class="button" target="_blank" rel="noopener noreferrer">see project</a>
-            </div>
+         </div>
         </li>
         <li class="project">
-          <div class="project-info">
+            
+                <img src="elements/snapshoot-4.png" alt="snapshoot-1">
+            
+            <div class="project-info">
             <h2 class="project-name">multi-post stories</h2>
             <div class="meta">
                 <p>canopy</p>
@@ -130,35 +133,34 @@
                 <li>javascript</li>
             </ul>
             <a href="#" class="button" target="_blank" rel="noopener noreferrer">see project</a>
-         </div>
-         <div class="screenshot">
-           <img src="elements/snapshoot-4.png" alt="snapshoot-1">
-         </div>
+        </div>
         </li>        
       </ul> 
-    </section>
+    </section> 
 
-    <section class="about">
+     <section class="about">
+         <div class="about-container">
         <div class="wrapper-about">
-            <h2 class="about-title primary-text">About Myself</h2>
-            <p class="about-subtitle second-text">Im a software Developer!, I can help you build a product, feature or website look through some of my work and experience! 
+            <h2 class="about-title">About</h2>
+            <h3 class="about-title">Myself</h3>
+            <p class="about-subtitle">Im a software Developer!, I can help you build a product, feature or website look through some of my work and experience! 
                 If you like what you see and have a project you need coded,don't hesitate to contact me.</p>
-            <h2 class="third-text conect"><a>let's connect</a></h2>
+            <a class="third-text conect">let's connect</a>
             <ul class="social about-social">
                 <li><a href="#"><img src="elements/twitter-icon.png" alt="twitter-icon"></a></li>
                 <li><a href="#"><img src="elements/github-icon.jpg" alt="github-icon"></a></li>
                 <li><a href="#"><img src="elements/m-icon.png" alt="m-icon"></a></li>     
             </ul>
 
-            <a href="#" class="button about-button" target="_blank" rel="noopener noreferrer">get my resume</a>
+            <a href="#" class="button about-button" target="_blank" rel="noopener noreferrer">Get my resume</a>
         </div>
         <ul class="technologies">
           <li class="lang">
              <div class="title">
                 <p>langguages</p>
-                <span>></span>
+                <span class="arrow">></span>
              </div>
-             <ul class="child-ul">
+             <ul class="child-langs">
                <li class="child-lang">
                   <img src="elements/js-icon.png" alt="js-icon">
                   <p>Javascript</p>
@@ -186,10 +188,10 @@
             </div>
           </li>
         </ul>
+        </div>
     </section>
-    <section class="contact-form">
-        <span class="shapes"></span>
-        
+     <section class="contact-form">  
+         <span class="shapes"></span>      
         <h2 class="contact-title">Contact me</h2>
        <p class="contact-subtitle">If you have an application you are interested in developing, 
            a feature that you need built or a project that needs coding.
@@ -201,6 +203,6 @@
             <textarea class="textarea" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
             <input type="submit" class="contact-button" value="Get in touch">
         </form>
-    </section>
+    </section> 
 </body>
 </html>
