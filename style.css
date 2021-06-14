@@ -664,7 +664,7 @@ a.about-button {
   .wrapper {
     width: 65%;
     height: 120vh;
-    padding-top: 350px;
+    padding-top: 250px;
     margin: auto;
   }
 
@@ -696,7 +696,7 @@ a.about-button {
   }
 
   .meta {
-    width: 45%;
+    width: 55%;
     margin: 30px 0;
   }
 
@@ -716,7 +716,7 @@ a.about-button {
   }
 
   .tools {
-    width: 35%;
+    width: 45%;
     margin-top: 20px;
   }
 
@@ -752,7 +752,7 @@ a.about-button {
   }
 
   .technologies {
-    width: 40%;
+    width: 50%;
   }
 
   .title {
