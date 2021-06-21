@@ -57,7 +57,7 @@ i.icon-element {
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 42px;
+  line-height: 35px;
   color: #172b4d;
 }
 
@@ -670,7 +670,8 @@ a.about-button {
 
   .primary-text {
     font-size: 65px;
-    line-height: 61px;
+    line-height: 71px;
+    margin-bottom: 10px;
   }
 
   .secondary-text {
@@ -678,12 +679,7 @@ a.about-button {
   }
 
   #third-text {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .you {
-    margin-bottom: 15px;
+    font-size: 18px;
   }
 
   li.project {
