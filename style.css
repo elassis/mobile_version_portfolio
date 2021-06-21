@@ -519,7 +519,9 @@ a.about-button {
   width: 100vw;
   height: 100vh;
   margin-top: -80px;
-  background-color: red;
+  background-color:#6070ffc0;
+  backdrop-filter: blur(8px);
+
 }
 .close-button {
   
@@ -533,8 +535,11 @@ a.about-button {
 
 }
 .menu-links:first-child{
-
-  padding-left: 85%;
+  padding-left: 80%;
+}
+.menu-links:first-child > a{
+  font-size: 25px;
+  font-weight: 100;
 }
 .menu-links > a{
   color:#fff;
@@ -544,6 +549,10 @@ line-height: 44px;
 }
 .close-button > a {
   font-size: 15px;
+}
+.display{
+  display: none;
+
 }
 
 @media only screen and (min-width: 768px) {
