@@ -514,6 +514,37 @@ a.about-button {
     width: 21%;
   }
 }
+.mobile-menu{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -80px;
+  background-color: red;
+}
+.close-button {
+  
+  padding-left: 50px;
+  
+  
+}
+
+.menu-links{
+  padding: 20px 10px 20px 28px;
+
+}
+.menu-links:first-child{
+
+  padding-left: 85%;
+}
+.menu-links > a{
+  color:#fff;
+  font-weight: 600;
+font-size: 32px;
+line-height: 44px;
+}
+.close-button > a {
+  font-size: 15px;
+}
 
 @media only screen and (min-width: 768px) {
   .nav {
