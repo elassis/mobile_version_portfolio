@@ -28,10 +28,6 @@ header {
   transition: all 0.5s ease-in-out;
 }
 
-.navbar > li > a:hover {
-  color: #6070ff;
-}
-
 .img-logo:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -452,6 +448,15 @@ a.about-button {
   position: absolute;
 }
 
+.mobile-menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -80px;
+  background-color: #6070ffc0;
+  backdrop-filter: blur(8px);
+}
+
 @media only screen and (min-width: 600px) {
   .nav {
     width: 50%;
@@ -513,6 +518,33 @@ a.about-button {
   .about-social {
     width: 21%;
   }
+}
+
+.close-button {
+  padding-left: 50px;
+}
+
+.menu-links {
+  padding: 20px 10px 20px 28px;
+}
+
+.menu-links:first-child {
+  padding-left: 80%;
+}
+
+.menu-links > a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.close-button > a {
+  font-size: 15px;
+}
+
+.display {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -767,4 +799,13 @@ a.about-button {
   .contact-subtitle {
     width: 35%;
   }
+}
+
+.menu-links:first-child > a {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.navbar > li > a:hover {
+  color: #6070ff;
 }

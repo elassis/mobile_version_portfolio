@@ -1,6 +1,7 @@
 *.code-workspace
 node_modules
 .stylelintrc.json
+.eslintrc.json
 package-lock.json
 .hintrc
 hint-report
