@@ -222,4 +222,21 @@ window.onload = function () {
   showProjects(array[1]);
   showProjects(array[2]);
   showProjects(array[3]);
+
+  // form validation
+  const form = document.getElementById('myForm');
+  const emailValue = form.elements.useremail;
+  const messageContainer = document.querySelector('#message');
+  form.addEventListener('submit', (event) => {
+    const { value } = emailValue;
+    const lowercaseValue = value.toLowerCase();
+
+    if (value === lowercaseValue) {
+
+    } else {
+      event.preventDefault();
+      messageContainer.className = 'message';
+      messageContainer.innerText = 'Email must be in lower case';
+    }
+  });
 };

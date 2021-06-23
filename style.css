@@ -471,6 +471,14 @@ a.about-button {
   backdrop-filter: blur(8px);
 }
 
+.message {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  color: red;
+  font-weight: bold;
+}
+
 /* popup code   ---------------------------------- */
 .container-popup {
   position: absolute;
