@@ -7,60 +7,36 @@ function showMenu() {
     menu.classList.add('display');
   }
 }
-myObj1 = {
-  id: 0,
-  title: 'tonic',
-  imgSrc: 'elements/snapshoot.png',
-  imgAlt: 'image-project-1',
-  metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
-};
-myObj2 = {
-  id: 1,
-  title: 'multi-post stories',
-  imgSrc: 'elements/snapshoot-2.png',
-  imgAlt: 'image-project-2',
-  metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
-};
-myObj3 = {
-  id: 2,
-  title: 'tonic',
-  imgSrc: 'elements/snapshoot-3.png',
-  imgAlt: 'image-project-3',
-  metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
-};
-myObj4 = {
-  id: 3,
-  title: 'multi-post stories',
-  imgSrc: 'elements/snapshoot-4.png',
-  imgAlt: 'image-project-4',
-  metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
-};
 
 const array = [
-  [
-    'tonic',
-    'elements/snapshoot.png',
-    'image-project-1',
-    'A daily selection of privately personalized reads no accounts or sign-ups required.',
-  ],
-  [
-    'multipost-stories',
-    'elements/snapshoot-2.png',
-    'image-project-2',
-    'A daily selection of privately personalized reads no accounts or sign-ups required.',
-  ],
-  [
-    'tonic',
-    'elements/snapshoot-3.png',
-    'image-project-3',
-    'A daily selection of privately personalized reads no accounts or sign-ups required.',
-  ],
-  [
-    'multipost-stories',
-    'elements/snapshoot-4.png',
-    'image-project-4',
-    'A daily selection of privately personalized reads no accounts or sign-ups required.',
-  ],
+  myObj1 = {
+    id: 0,
+    title: 'tonic',
+    imgSrc: 'elements/snapshoot.png',
+    imgAlt: 'image-project-1',
+    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+  },
+  myObj2 = {
+    id: 1,
+    title: 'multi-post stories',
+    imgSrc: 'elements/snapshoot-2.png',
+    imgAlt: 'image-project-2',
+    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+  },
+  myObj3 = {
+    id: 2,
+    title: 'tonic',
+    imgSrc: 'elements/snapshoot-3.png',
+    imgAlt: 'image-project-3',
+    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+  },
+  myObj4 = {
+    id: 3,
+    title: 'multi-post stories',
+    imgSrc: 'elements/snapshoot-4.png',
+    imgAlt: 'image-project-4',
+    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+  },
 ];
 
 function showProjects(obj) {
@@ -160,7 +136,7 @@ function showPopup(id) {
   projectWrapper.setAttribute('class', 'container');
   rowTitle.setAttribute('class', 'first-row');
   title.setAttribute('class', 'project-name');
-  title.innerText = array[id][0];
+  title.innerText = array[id].title;
   closeButton.innerText = 'x';
   closeButton.setAttribute('onclick', 'closePopup()');
   rowMeta.setAttribute('class', 'meta');
@@ -170,11 +146,11 @@ function showPopup(id) {
   metaText2.innerText = 'back end dev';
   metaText3.innerText = '2015';
   rowImg.setAttribute('class', 'popup-img');
-  featuredImage.setAttribute('src', array[id][1]);
-  featuredImage.setAttribute('alt', array[id][2]);
+  featuredImage.setAttribute('src', array[id].imgSrc);
+  featuredImage.setAttribute('alt', array[id].imgAlt);
   wrapperDesktop.setAttribute('class', 'desktop-layout');
   textDescription.setAttribute('class', 'second-text secont-text-popup');
-  textDescription.innerText = array[id][3];
+  textDescription.innerText = array[id].metaDescription;
   secondPartText.setAttribute('class', 'second-part');
   secondPartText.innerText = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
   rowDesktop2.setAttribute('class', 'second-child');
@@ -242,8 +218,8 @@ function closePopup() {
 }
 
 window.onload = function () {
-  showProjects(myObj1);
-  showProjects(myObj2);
-  showProjects(myObj3);
-  showProjects(myObj4);
+  showProjects(array[0]);
+  showProjects(array[1]);
+  showProjects(array[2]);
+  showProjects(array[3]);
 };
