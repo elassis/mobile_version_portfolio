@@ -14,12 +14,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8J3XCGK09"></script>
     <script>
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
 
-      gtag('config', 'G-D8J3XCGK09');
+            gtag('config', 'G-D8J3XCGK09');
     </script>
     <title>Enmanuel's Portfolio</title>
         <script src="script.js"></script>
@@ -129,11 +129,13 @@
            a feature that you need built or a project that needs coding.
             I’d love to help with it 
        </p>
-        <form action="https://formspree.io/f/mdoyznvk" method="post">
+        <form action="https://formspree.io/f/mdoyznvk" method="post" id="myForm">
             <input type="text" class="input" name='username' required maxlength="30" placeholder="Yeremias">
             <input type="email" class="input" name="useremail" required maxlength="30" placeholder="natajayanj14@gmail.com">
             <textarea class="textarea" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
+            <p id="message"></p>
             <input type="submit" class="contact-button" value="Get in touch">
+            
         </form>
     </section>
 </body>
