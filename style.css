@@ -10,7 +10,7 @@ body {
   font-family: Poppins, sans-serif;
 }
 
-.navbar {
+ul.navbar {
   display: none;
 }
 
@@ -133,6 +133,11 @@ ul.work {
   margin: 10px 0 0 0;
 }
 
+.first-row > a {
+  align-self: center;
+  font-size: 30px;
+}
+
 .meta p:nth-child(1) {
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -145,6 +150,14 @@ ul.work {
 .meta > img {
   width: 10px;
   height: 10px;
+}
+
+.popup-img > img {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin: 10px auto;
+  transition: all 1s ease-in-out;
 }
 
 .project > img:hover {
@@ -457,12 +470,62 @@ a.about-button {
   backdrop-filter: blur(8px);
 }
 
+
+
+/* popup code   ---------------------------------- */
+.container-popup {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 10px;
+  margin-top: -582px;
+  width: 100vw;
+  height: auto;
+  background-color: #c1c7d09d;
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  padding: 16px;
+  height: auto;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid #dfe1e6;
+}
+
+.first-row {
+  display: flex;
+}
+
+.last-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.second-text-popup {
+  font-size: 15px;
+}
+
+.second-part {
+  display: none;
+}
+
+.popup-button {
+  padding: 10px !important;
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   .nav {
     width: 50%;
   }
 
-  .navbar {
+  ul.navbar {
     display: flex;
     width: 100%;
     align-items: center;
@@ -478,7 +541,7 @@ a.about-button {
     background-position: right;
   }
 
-  .navbar > li > a {
+  ul.navbar > li > a {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -486,6 +549,11 @@ a.about-button {
     line-height: 20px;
     color: #344563;
     text-transform: capitalize;
+    text-decoration: none;
+  }
+
+  ul.navbar > li > a:hover {
+    color: #6070ff;
   }
 
   ul.work {
@@ -687,7 +755,7 @@ a.about-button {
     padding: 0 54px;
   }
 
-  .navbar {
+  ul.navbar {
     width: 90%;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -726,6 +794,10 @@ a.about-button {
   .meta {
     width: 55%;
     margin: 30px 0;
+  }
+
+  .first-row > p {
+    width: 95%;
   }
 
   .meta p:nth-child(1) {
@@ -799,13 +871,60 @@ a.about-button {
   .contact-subtitle {
     width: 35%;
   }
+
+  .container-popup {
+    margin-top: -850px;
+  }
+
+  .container {
+    width: 70%;
+    padding: 30px;
+  }
+
+  .container > ul > li.meta {
+    width: 35%;
+  }
+
+  .popup-img > img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .desktop-layout {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .second-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second-child > .tools,
+  .last-row {
+    width: 100%;
+  }
+
+  .last-row > li {
+    width: 100%;
+  }
+
+  .second-text-popup {
+    font-size: 16px;
+    line-height: 35px;
+  }
+
+  .second-part {
+    display: block;
+  }
+
+  #desktop-button1,
+  #desktop-button2 {
+    width: 150px;
+  }
 }
 
 .menu-links:first-child > a {
   font-size: 25px;
   font-weight: 100;
-}
-
-.navbar > li > a:hover {
-  color: #6070ff;
 }
