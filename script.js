@@ -217,6 +217,29 @@ function closePopup() {
   }
 }
 
+// local storage code
+function getStorage() {
+  // convert the json string into js object
+  const objFinal = JSON.parse(localStorage.getItem('inputUsuario'));
+
+  document.getElementById('inputUser').value = objFinal.valorUsuario;
+  document.getElementById('inputEmail').value = objFinal.valorCorreo;
+  document.getElementById('textArea').value = objFinal.valorMessage;
+}
+function populateStorage() {
+  const valueUser = document.getElementById('inputUser').value;
+  const valueEmail = document.getElementById('inputEmail').value;
+  const valueMessage = document.getElementById('textArea').value;
+
+  const myObj = {
+    valorUsuario: valueUser,
+    valorCorreo: valueEmail,
+    valorMessage: valueMessage,
+  };
+  // convert object into JSON string and save it in one localStorage variable
+  localStorage.setItem('inputUsuario', JSON.stringify(myObj));
+}
+
 window.onload = function () {
   showProjects(array[0]);
   showProjects(array[1]);
@@ -231,12 +254,14 @@ window.onload = function () {
     const { value } = emailValue;
     const lowercaseValue = value.toLowerCase();
 
-    if (value === lowercaseValue) {
-
-    } else {
+    if (!value === lowercaseValue) {
       event.preventDefault();
       messageContainer.className = 'message';
       messageContainer.innerText = 'Email must be in lower case';
     }
   });
+
+  // localStorage part
+
+  getStorage();
 };

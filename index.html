@@ -130,9 +130,9 @@
             I’d love to help with it 
        </p>
         <form action="https://formspree.io/f/mdoyznvk" method="post" id="myForm">
-            <input type="text" class="input" name='username' required maxlength="30" placeholder="Yeremias">
-            <input type="email" class="input" name="useremail" required maxlength="30" placeholder="natajayanj14@gmail.com">
-            <textarea class="textarea" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
+            <input type="text" id='inputUser' onchange="populateStorage()" class="input" name='username' required maxlength="30" placeholder="Yeremias">
+            <input type="email" id='inputEmail' onchange="populateStorage()" class="input" name="useremail" required maxlength="30" placeholder="natajayanj14@gmail.com">
+            <textarea class="textarea" id='textArea' onchange="populateStorage()" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
             <p id="message"></p>
             <input type="submit" class="contact-button" value="Get in touch">
             
