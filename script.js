@@ -221,7 +221,6 @@ function closePopup() {
 function getStorage() {
   // convert the json string into js object
   const objFinal = JSON.parse(localStorage.getItem('inputUsuario'));
-  
 
   document.getElementById('inputUser').value = objFinal.valorUsuario;
   document.getElementById('inputEmail').value = objFinal.valorCorreo;
@@ -229,9 +228,9 @@ function getStorage() {
 }
 function populateStorage() {
   const form = document.getElementById('myForm');
-  const valueUser = form.elements.username;
-  const valueEmail = form.elements.useremail;
-  const valueMessage = form.elements.message;
+  const valueUser = form.elements.username.value;
+  const valueEmail = form.elements.useremail.value;
+  const valueMessage = form.elements.message.value;
 
   const myObj = {
     valorUsuario: valueUser,
@@ -250,13 +249,13 @@ window.onload = function () {
 
   // form validation
   const form = document.getElementById('myForm');
-  const emailValue = form.elements.useremail;
   const messageContainer = document.querySelector('#message');
+
   form.addEventListener('submit', (event) => {
-    const { value } = emailValue;
+    const { value } = form.elements.useremail;
     const lowercaseValue = value.toLowerCase();
 
-    if (!value === lowercaseValue) {
+    if (value !== lowercaseValue) {
       event.preventDefault();
       messageContainer.className = 'message';
       messageContainer.innerText = 'Email must be in lower case';
