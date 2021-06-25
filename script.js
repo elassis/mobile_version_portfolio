@@ -221,15 +221,17 @@ function closePopup() {
 function getStorage() {
   // convert the json string into js object
   const objFinal = JSON.parse(localStorage.getItem('inputUsuario'));
+  
 
   document.getElementById('inputUser').value = objFinal.valorUsuario;
   document.getElementById('inputEmail').value = objFinal.valorCorreo;
   document.getElementById('textArea').value = objFinal.valorMessage;
 }
 function populateStorage() {
-  const valueUser = document.getElementById('inputUser').value;
-  const valueEmail = document.getElementById('inputEmail').value;
-  const valueMessage = document.getElementById('textArea').value;
+  const form = document.getElementById('myForm');
+  const valueUser = form.elements.username;
+  const valueEmail = form.elements.useremail;
+  const valueMessage = form.elements.message;
 
   const myObj = {
     valorUsuario: valueUser,
