@@ -11,21 +11,28 @@ function showMenu() {
 const array = [
   myObj1 = {
     id: 0,
-    title: 'tonic',
-    imgSrc: 'elements/snapshoot.png',
-    imgAlt: 'image-project-1',
-    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+    title: 'To do List Project',
+    devType:'Back end',
+    imgSrc: 'elements/screenShot-toDoList.jpg',
+    imgAlt: 'image-todolist',
+    metaDescription: 'To do list able to add, remove, edit and save in browser the tasks.',
+    linkGithub:'https://github.com/elassis/webpack_project',
+    linkLive:'https://elassis.github.io/webpack_project/'
   },
   myObj2 = {
     id: 1,
-    title: 'multi-post stories',
-    imgSrc: 'elements/snapshoot-2.png',
+    title: 'Doctor Profile Layout',
+    devType:'Front end',
+    imgSrc: 'elements/screenShot-doctor.jpg',
     imgAlt: 'image-project-2',
-    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+    metaDescription: 'A frontend layuout update to the doctor profile of sodenn.com page',
+    linkGithub:'https://github.com/elassis/sodenn-doctor-profile',
+    linkLive:'https://elassis.github.io/sodenn-doctor-profile/'
   },
   myObj3 = {
     id: 2,
     title: 'tonic',
+    devType:'Front end',
     imgSrc: 'elements/snapshoot-3.png',
     imgAlt: 'image-project-3',
     metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
@@ -33,6 +40,7 @@ const array = [
   myObj4 = {
     id: 3,
     title: 'multi-post stories',
+    devType:'Front end',
     imgSrc: 'elements/snapshoot-4.png',
     imgAlt: 'image-project-4',
     metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
@@ -65,9 +73,9 @@ function showProjects(obj) {
   projectTitle.setAttribute('class', 'project-name');
   projectTitle.innerText = obj.title;
   projectMeta.setAttribute('class', 'meta');
-  metaText1.innerText = 'canopy';
-  metaText2.innerText = 'back end dev';
-  metaText3.innerText = '2015';
+  metaText1.innerText = 'HTML';
+  metaText2.innerText = obj.devType;
+  metaText3.innerText = '2021';
   separator1.setAttribute('src', 'elements/counter.png');
   separator1.setAttribute('alt', 'separator-dots');
   separator2.setAttribute('src', 'elements/counter.png');
@@ -140,11 +148,11 @@ function showPopup(id) {
   closeButton.innerText = 'x';
   closeButton.setAttribute('onclick', 'closePopup()');
   rowMeta.setAttribute('class', 'meta');
-  metaText1.innerText = 'canopy';
+  metaText1.innerText = 'HTML';
   separator1.setAttribute('src', 'elements/counter.png');
   separator2.setAttribute('src', 'elements/counter.png');
-  metaText2.innerText = 'back end dev';
-  metaText3.innerText = '2015';
+  metaText2.innerText = array[id].devType;
+  metaText3.innerText = '2021';
   rowImg.setAttribute('class', 'popup-img');
   featuredImage.setAttribute('src', array[id].imgSrc);
   featuredImage.setAttribute('alt', array[id].imgAlt);
@@ -161,9 +169,11 @@ function showPopup(id) {
   wrapperbuttons.setAttribute('class', 'last-row');
   button1.setAttribute('id', 'desktop-button1');
   button1.setAttribute('class', 'button popup-button');
+  button1.setAttribute('href',array[id].linkLive);
   button1.innerText = 'see live';
   button2.setAttribute('id', 'desktop-button2');
   button2.setAttribute('class', 'button popup-button');
+  button2.setAttribute('href',array[id].linkGithub);
   button2.innerText = 'see source';
 
   rowTitle.appendChild(title);
@@ -176,7 +186,7 @@ function showPopup(id) {
   rowMeta.appendChild(metaText3);
 
   rowImg.appendChild(featuredImage);
-  textDescription.appendChild(secondPartText);
+  //textDescription.appendChild(secondPartText);
   rowDesktop1.appendChild(textDescription);
   // rowDesktop1.appendChild(secondPartText);
 
