@@ -13,6 +13,7 @@ const array = [
     id: 0,
     title: 'Ruby on Rails Budget Web App',
     devType:'Front end / Back end',
+    devTools:['Ruby','Rails','JavaScript'],
     imgSrc: 'elements/cropped-ruby-budget-1.png',
     imgAlt: 'image-project-budget',
     metaDescription: 'Web application where the user can track their daily expenses and sort it by categories.',
@@ -21,31 +22,34 @@ const array = [
   },
   myObj2 = {
     id: 1,
+    title: 'React Math Website',
+    devTools:['React','JavaScript','HTML'],
+    devType:'Front end',
+    imgSrc: 'elements/snapshoot-4.png',
+    imgAlt: 'image-project-4',
+    metaDescription: 'This is a website  of privately personalized reads no accounts or sign-ups required.',
+  },
+  myObj3 = {
+    id: 2,
     title: 'To do List Project',
     devType:'Back end',
+    devTools:['JavaScript','HTML','CSS'],
     imgSrc: 'elements/screenShot-toDoList.jpg',
     imgAlt: 'image-todolist',
     metaDescription: 'To do list able to add, remove, edit and save in browser the tasks.',
     linkGithub:'https://github.com/elassis/webpack_project',
     linkLive:'https://elassis.github.io/webpack_project/'
   },
-  myObj3 = {
-    id: 2,
-    title: 'Doctor Profile Layout',
-    devType:'Front end',
-    imgSrc: 'elements/screenShot-doctor.jpg',
-    imgAlt: 'image-project-2',
-    metaDescription: 'A frontend layuout update to the doctor profile of sodenn.com page',
-    linkGithub:'https://github.com/elassis/sodenn-doctor-profile',
-    linkLive:'https://elassis.github.io/sodenn-doctor-profile/'
-  },
   myObj4 = {
     id: 3,
-    title: 'multi-post stories',
+    title: 'Doctor Profile Layout',
     devType:'Front end',
-    imgSrc: 'elements/snapshoot-4.png',
-    imgAlt: 'image-project-4',
-    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
+    devTools:['JavaScript','HTML','CSS'],
+    imgSrc: 'elements/screenShot-doctor.jpg',
+    imgAlt: 'image-project-2',
+    metaDescription: 'A frontend layout update to the doctor profile of sodenn.com page',
+    linkGithub:'https://github.com/elassis/sodenn-doctor-profile',
+    linkLive:'https://elassis.github.io/sodenn-doctor-profile/'
   },
 ];
 
@@ -75,7 +79,7 @@ function showProjects(obj) {
   projectTitle.setAttribute('class', 'project-name');
   projectTitle.innerText = obj.title;
   projectMeta.setAttribute('class', 'meta');
-  metaText1.innerText = 'HTML';
+  metaText1.innerText = obj.devTools[0];
   metaText2.innerText = obj.devType;
   metaText3.innerText = '2021';
   separator1.setAttribute('src', 'elements/counter.png');
@@ -85,9 +89,9 @@ function showProjects(obj) {
   metaDescriptionText.setAttribute('class', 'second-text');
   metaDescriptionText.innerText = obj.metaDescription;
   toolsContainer.setAttribute('class', 'tools');
-  tool1.innerText = 'html';
-  tool2.innerText = 'css';
-  tool3.innerText = 'javascript';
+  tool1.innerText = obj.devTools[0];
+  tool2.innerText = obj.devTools[1];
+  tool3.innerText = obj.devTools[2];
   projectButton.setAttribute('class', 'button');
   projectButton.setAttribute('onclick', `showPopup(${obj.id})`);
   projectButton.innerText = 'see project';
@@ -150,7 +154,7 @@ function showPopup(id) {
   closeButton.innerText = 'x';
   closeButton.setAttribute('onclick', 'closePopup()');
   rowMeta.setAttribute('class', 'meta');
-  metaText1.innerText = 'HTML';
+  metaText1.innerText = array[id].devTools[0];
   separator1.setAttribute('src', 'elements/counter.png');
   separator2.setAttribute('src', 'elements/counter.png');
   metaText2.innerText = array[id].devType;
@@ -165,9 +169,9 @@ function showPopup(id) {
   secondPartText.innerText = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
   rowDesktop2.setAttribute('class', 'second-child');
   wrapperTools.setAttribute('class', 'tools');
-  tool1.innerText = 'html';
-  tool2.innerText = 'css';
-  tool3.innerText = 'javascript';
+  tool1.innerText = array[id].devTools[0];
+  tool2.innerText = array[id].devTools[1];
+  tool3.innerText = array[id].devTools[2];
   wrapperbuttons.setAttribute('class', 'last-row');
   button1.setAttribute('id', 'desktop-button1');
   button1.setAttribute('class', 'button popup-button');
@@ -188,9 +192,7 @@ function showPopup(id) {
   rowMeta.appendChild(metaText3);
 
   rowImg.appendChild(featuredImage);
-  //textDescription.appendChild(secondPartText);
   rowDesktop1.appendChild(textDescription);
-  // rowDesktop1.appendChild(secondPartText);
 
   wrapperTools.appendChild(tool1);
   wrapperTools.appendChild(tool2);
