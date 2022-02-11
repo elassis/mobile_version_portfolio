@@ -11,6 +11,16 @@ function showMenu() {
 const array = [
   myObj1 = {
     id: 0,
+    title: 'Ruby on Rails Budget Web App',
+    devType:'Front end / Back end',
+    imgSrc: 'elements/cropped-ruby-budget-1.png',
+    imgAlt: 'image-project-budget',
+    metaDescription: 'Web application where the user can track their daily expenses and sort it by categories.',
+    linkGithub:'https://github.com/elassis/rails_budget_app',
+    linkLive:'https://protected-anchorage-45932.herokuapp.com/'
+  },
+  myObj2 = {
+    id: 1,
     title: 'To do List Project',
     devType:'Back end',
     imgSrc: 'elements/screenShot-toDoList.jpg',
@@ -19,8 +29,8 @@ const array = [
     linkGithub:'https://github.com/elassis/webpack_project',
     linkLive:'https://elassis.github.io/webpack_project/'
   },
-  myObj2 = {
-    id: 1,
+  myObj3 = {
+    id: 2,
     title: 'Doctor Profile Layout',
     devType:'Front end',
     imgSrc: 'elements/screenShot-doctor.jpg',
@@ -28,14 +38,6 @@ const array = [
     metaDescription: 'A frontend layuout update to the doctor profile of sodenn.com page',
     linkGithub:'https://github.com/elassis/sodenn-doctor-profile',
     linkLive:'https://elassis.github.io/sodenn-doctor-profile/'
-  },
-  myObj3 = {
-    id: 2,
-    title: 'tonic',
-    devType:'Front end',
-    imgSrc: 'elements/snapshoot-3.png',
-    imgAlt: 'image-project-3',
-    metaDescription: 'A daily selection of privately personalized reads no accounts or sign-ups required.',
   },
   myObj4 = {
     id: 3,
