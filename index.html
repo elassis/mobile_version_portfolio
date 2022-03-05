@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+      <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="title" property="og:title" content="My Portfolio" />
@@ -14,10 +14,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8J3XCGK09"></script>
-        <script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8J3XCGK09"></script>
+          <script type="module" defer src="./script.js"></script>
+          <script>
 
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -30,8 +31,7 @@
         <script src="script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <img src="elements/my-logo.png" alt="logo" class="img-logo">            
+    <header class="header">           
         <nav class="nav">
             <ul class="navbar">
                 <li><a href="#work">portfolio</a></li>
@@ -57,14 +57,20 @@
                 If you like what you see and have a project you need coded,don't hesitate to contact me.</p>
             <p id="third-text">let's connect</p>
             <div id="social">
-                <a href="#"><img src="elements/twitter-icon.png" alt="twitter-icon"></a>
-                <a href=""><img src="elements/github-icon.jpg" alt="github-icon"></a>   
+                <a href="#" class="linkedin-icon"><img src="elements/linkedin.png" alt="linkedin-icon"></a>
+                <a href="#"><img src="elements/github-icon.jpg" alt="github-icon"></a>   
             </div>
           </div> 
     </main>
 
     <div id="cont-popup" class="container-popup display">
-      <div id='container' class="container"></div></div>
+      <div id='container' class="container"></div>
+    </div>
+    <div class="projects-categories">
+      <button id="all">All</button>
+      <button id="react">React</button>
+      <button id="ror">Ruby on Rails</button>
+    </div>
     
     <section class="work-wrapper">
       <ul class="work" id="work">   
@@ -140,5 +146,4 @@
         </form>
     </section>
 </body>
-
 </html>

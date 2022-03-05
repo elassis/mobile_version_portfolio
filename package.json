@@ -9,5 +9,24 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.19.0"
-  }
+  },
+  "name": "mobile_version_portfolio",
+  "description": "* In this repo i will be creating all the content and structure of my professional portfolio as a software developer.  * i have added the second part of the project adding the about part and also langguages and frameworks and skills section.  * You can find my publish portfolio [HERE.](https://elassis.github.io/mobile_version_portfolio/)",
+  "version": "1.0.0",
+  "main": "handlers.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elassis/mobile_version_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elassis/mobile_version_portfolio/issues"
+  },
+  "homepage": "https://github.com/elassis/mobile_version_portfolio#readme"
 }
