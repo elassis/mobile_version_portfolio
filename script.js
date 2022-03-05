@@ -1,4 +1,4 @@
-const initial = () => {
+function initial(){
   console.log('clicked')
 }
 
