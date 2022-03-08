@@ -24,9 +24,13 @@ let projects = [
 
 const initial = {
   showAll:()=>{
+    initial.showProjects('all');
   },
   addClass:(e)=>{
-    e.target.classList.toggle('selected');
+    e.target.classList.add('selected');
+    e.path[1].childNodes.forEach((c)=>{
+      if(c.id !== e.target.id && c.className === 'selected') c.classList.remove('selected');
+    });
   },
   showProjects:(categorie)=>{
     document.querySelector('#work').innerHTML = "";

@@ -118,6 +118,9 @@ background-color: blue;
   align-items: center;
   margin: 10px auto;
 }
+.work-wrapper {
+  background: #e5e5e5;
+}
 
 .you {
   margin-bottom: 10px;
@@ -519,11 +522,6 @@ a.about-button {
     flex-direction: row;
     height: auto;
   }
-
-  .work-wrapper {
-    background: #e5e5e5;
-  }
-
   .wrapper-about {
     border-radius: 0 73px 0 0;
   }
