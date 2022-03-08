@@ -60,10 +60,10 @@ i.icon-element {
   color: #172b4d;
 }
 .projects-categories{
-  width: 100%;
+  width:100%;
   background-color:#e5e5e5;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   gap:10px;
   padding: 10px 0;
 }
@@ -72,15 +72,52 @@ i.icon-element {
     background-color: #e5e5e5;
     font-size: 20px;
     color: #6070ff;
+    padding: 10px 30px;
 
 }
 .selected {
-  color: white;
-  background-color: #6070ff;
-  padding: 5px 20px;
-  border-radius: 24px;
+  color: white !important;
+  background-color: #6070ff !important;
+  border-radius: 20px;
 }
 
+.all, .react, .ror {
+  padding: 10px 30px;
+  border-radius: 25px;
+}
+.project-box{
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  border: 1px solid;
+}
+.featured-img{
+  width: 100%;
+  height: 200px;
+  background: lightgray;
+}
+.title-project{
+  height: 40px;
+  text-align: center;
+  width: 100%;
+  background: green;
+  align-items: center;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.description-project{
+width: 100%;
+height: 110px;
+padding: 10px;
+background-color: blue;
+}
+.frameworks-project{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin: 10px auto;
+}
 
 .you {
   margin-bottom: 10px;
@@ -110,74 +147,13 @@ i.icon-element {
 /*projects CSS*/
 ul.work {
   display: flex;
-  flex-direction: column;
-  padding: 124px 24px;
-  justify-content: space-around;
+  width: 80vw;
+  margin: auto;
+  flex-wrap: wrap;
+  gap:30px;
+  padding: 25px 0 50px 0;
   background: #e5e5e5;
 }
-
-.work > li.project {
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px 10px 20px 10px;
-  border: 1px solid rgb(221, 212, 212);
-  margin-bottom: 70px;
-  overflow: hidden;
-  height: 500px;
-}
-.img_container {
-  width:100%;
-  height: 250px;
-  overflow: hidden;
-}
-.img_container > img {
-  width: 100%;
-  height: auto;
-}
-.project-name {
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 32px;
-  line-height: 44px;
-  color: #172b4d;
-  text-transform: capitalize;
-  width: 95%;
-}
-
-.project-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.meta {
-  width: 75%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0 0 0;
-}
-
-.first-row > a {
-  align-self: center;
-  font-size: 30px;
-}
-
-.meta p:nth-child(1) {
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  color: #344563;
-  text-transform: uppercase;
-}
-
-.meta > img {
-  width: 10px;
-  height: 10px;
-}
-
 .popup-img > img {
   width: 100%;
   display: block;
@@ -186,64 +162,7 @@ ul.work {
   transition: all 1s ease-in-out;
 }
 
-.project > img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
 
-.meta p:nth-child(3),
-.meta p:nth-child(5) {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: capitalize;
-  color: #7a869a;
-}
-
-.second-text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 24px;
-  color: #344563;
-  margin: 15px 0;
-}
-
-.tools {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin-bottom: 35px;
-}
-
-.tools > li {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-
-  /* identical to box height, or 133% */
-  background-color: #ebebff;
-  letter-spacing: 0.03em;
-  border-radius: 8px;
-  padding: 4px 12px;
-  color: #6070ff;
-}
-
-a.button {
-  font-style: normal;
-  width: 140px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  color: #396df2;
-  border: 1px solid #396df2;
-  padding: 16px;
-  border-radius: 10px;
-  transition: all 1s ease-in-out;
-  display: block;
-}
 
 a.button:hover {
   margin-top: -10px;
@@ -592,16 +511,6 @@ a.about-button {
     color: #6070ff;
   }
 
-  ul.work {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .meta,
-  .tools {
-    width: 60%;
-  }
-
   .lang {
     height: 195px;
   }
@@ -669,7 +578,7 @@ a.about-button {
     font-size: 37px;
     line-height: 42px;
   }
-
+  
   .float,
   .you {
     display: inline-block;
@@ -686,13 +595,7 @@ a.about-button {
     line-height: 32px;
   }
 
-  ul.work {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .meta {
+   .meta {
     width: 80%;
   }
 
@@ -712,16 +615,12 @@ a.about-button {
     padding: 120px;
   }
 
-  ul.work {
-    flex-direction: column;
-  }
-
   .project-info {
     width: 48%;
     margin: 25px auto;
     align-self: center;
   }
-
+ 
   .meta,
   .tools {
     width: 50%;
