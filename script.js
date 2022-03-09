@@ -2,23 +2,38 @@ let projects = [
   {
     title:'projectOne',
     description:'lorem',
-    image:'url',
+    image:'none',
     technologies:['react','javascript','html5'],
-    categories:['react','all']
+    categories:['react','all'],
+    liveUrl:'whatEver',
+    githubUrl:'github-url'
   },
   {
     title:'projectTwo',
     description:'lorem',
     image:'url',
-    technologies:['rails','postgresql','html'],
-    categories:['ror','all']
+    technologies:['rails','postgresql','html5'],
+    categories:['ror','all'],
+    liveUrl:'whatEver',
+    githubUrl:'github-url'
   },
   {
     title:'projectThree',
     description:'lorem',
     image:'url',
-    technologies:['rails','postgresql','html'],
-    categories:['ror','all']
+    technologies:['rails','postgresql','html5'],
+    categories:['ror','all'],
+    liveUrl:'whatEver',
+    githubUrl:'github-url'
+  },
+  {
+    title:'projectFour',
+    description:'lorem',
+    image:'url',
+    technologies:['react','javascript','html5'],
+    categories:['react','all'],
+    liveUrl:'whatEver',
+    githubUrl:'github-url'
   }
 ]
 
@@ -43,8 +58,10 @@ const initial = {
   projectTemplate:(obj)=>{
     let container = document.querySelector('#work');
     let template = ` <li class="project-box">
-    <div class="featured-img">
-      <img src="${obj.image}" alt="project_image"/>
+    <div class="featured-tech">
+      <div class="tech-icons"></div>
+      <div class="tech-icons"></div>
+      <div class="tech-icons"></div>
     </div>
     <div class="data">
       <div class="title-project">
@@ -61,7 +78,15 @@ const initial = {
     </div>
   </li>`;
   container.innerHTML += template;
-  }
+  },
+  showMenu:()=>{
+    let mobileMenu = `<div class="pp-bg">
+    <div class="pp-body">
+      <p>here</p>
+    </div>
+  </div>`;
+  document.body.innerHTML+= mobileMenu;
+  },
 }
 
 export default initial;

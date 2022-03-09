@@ -6,5 +6,7 @@ document.addEventListener('click',(e)=>{
   if(e.target.id === 'all' || e.target.id === 'react' || e.target.id === 'ror' ){
     initial.addClass(e);
     initial.showProjects(e.target.id);
+  }else if(e.target.id === 'menu-button'){
+    initial.showMenu();
   }
 });
