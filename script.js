@@ -1,18 +1,18 @@
 let projects = [
   {
-    title:'projectOne',
-    description:'lorem',
+    title:'rockets/missions reservations',
+    description:'web application where the user is able to reserve rockets and missions, this application consumes information from the space x remote api.',
     image:'none',
-    technologies:['react','javascript','html5'],
+    technologies:['js-icon.png','react-icon.png','redux-icon.png'],
     categories:['react','all'],
-    liveUrl:'whatEver',
+    liveUrl:'live-url',
     githubUrl:'github-url'
   },
   {
     title:'projectTwo',
     description:'lorem',
     image:'url',
-    technologies:['rails','postgresql','html5'],
+    technologies:['rails-icon.png','posgresql-icon.jpg','html-icon.png'],
     categories:['ror','all'],
     liveUrl:'whatEver',
     githubUrl:'github-url'
@@ -59,9 +59,15 @@ const initial = {
     let container = document.querySelector('#work');
     let template = ` <li class="project-box">
     <div class="featured-tech">
-      <div class="tech-icons"></div>
-      <div class="tech-icons"></div>
-      <div class="tech-icons"></div>
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[0]}"/>
+      </div>
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[1]}"/>
+      </div>
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[2]}"/>
+      </div>
     </div>
     <div class="data">
       <div class="title-project">
@@ -71,9 +77,12 @@ const initial = {
         <p>${obj.description}</p>
       </div>
       <div class="frameworks-project">
-        <p>${obj.technologies[0]}</p>
-        <p>${obj.technologies[1]}</p>
-        <p>${obj.technologies[2]}</p>
+        <a href="${obj.githubUrl}">
+          <img src="./elements/pop-btn-2.png"/>
+        </a>
+        <a href="${obj.liveUrl}">
+        <img src="./elements/pop-btn-1.png"/>
+        </a>
       </div>
     </div>
   </li>`;
