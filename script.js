@@ -1,16 +1,15 @@
 let projects = [
   {
-    title:'rockets/missions reservations',
-    description:'web application where the user is able to reserve rockets and missions, this application consumes information from the space x remote api.',
-    image:'none',
-    technologies:['js-icon.png','react-icon.png','redux-icon.png'],
-    categories:['react','all'],
-    liveUrl:'live-url',
+    title:'car booking application',
+    description:"web app where the user can rent cars per hour. in this project I've used react in the frontend and ruby on rails in the backend as a remote rest api.",
+    technologies:['rails-icon.png','react-icon.png','posgresql-icon.jpg'],
+    categories:['ror','all'],
+    liveUrl:'whatEver',
     githubUrl:'github-url'
   },
   {
-    title:'projectTwo',
-    description:'lorem',
+    title:'rails budget application',
+    description:'web app where the user can track their expenses and organize it by categories, i developed this app completely with ruby on rails and postgresql as database.',
     image:'url',
     technologies:['rails-icon.png','posgresql-icon.jpg','html-icon.png'],
     categories:['ror','all'],
@@ -18,12 +17,11 @@ let projects = [
     githubUrl:'github-url'
   },
   {
-    title:'projectThree',
-    description:'lorem',
-    image:'url',
-    technologies:['rails','postgresql','html5'],
-    categories:['ror','all'],
-    liveUrl:'whatEver',
+    title:'rockets/missions reservations',
+    description:'web application where the user is able to reserve rockets and missions, this application consumes information from the space x remote api.',
+    technologies:['js-icon.png','react-icon.png','redux-icon.png'],
+    categories:['react','all'],
+    liveUrl:'live-url',
     githubUrl:'github-url'
   },
   {
@@ -78,10 +76,10 @@ const initial = {
       </div>
       <div class="frameworks-project">
         <a href="${obj.githubUrl}">
-          <img src="./elements/pop-btn-2.png"/>
+          <img class="links" src="./elements/pop-btn-2.png"/>
         </a>
         <a href="${obj.liveUrl}">
-        <img src="./elements/pop-btn-1.png"/>
+          <img class="links" src="./elements/pop-btn-1.png"/>
         </a>
       </div>
     </div>

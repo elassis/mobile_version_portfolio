@@ -142,8 +142,18 @@ color: hsl(240deg 7% 62%);
   align-items: center;
   margin: 4px 10px;
 }
-.frameworks-project > a{
+.frameworks-project > a {
+  position: relative;
+}
+.links{
+  position: absolute;
   transition: all 0.2s ease;
+}
+.frameworks-project > a:nth-child(2){
+  margin-left: 15px;
+}
+.links:hover{
+  margin-top:-5px;
 }
 .work-wrapper {
   background: #e5e5e5;
