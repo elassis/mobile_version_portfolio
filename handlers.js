@@ -8,5 +8,7 @@ document.addEventListener('click',(e)=>{
     initial.showProjects(e.target.id);
   }else if(e.target.id === 'menu-button'){
     initial.showMenu();
+  }else if(e.target.classList.contains('languages-btn') || e.target.classList.contains('title')){
+    initial.showLang();
   }
 });

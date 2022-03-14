@@ -112,6 +112,18 @@ const initial = {
   </div>`;
   document.body.innerHTML+= mobileMenu;
   },
+  showLang:()=>{
+    let childs = document.querySelector('.child-langs');
+    if(childs.style.marginTop < '45px'){
+      childs.style.marginTop = '45px';
+      document.querySelector('.arrow').classList.add('rotate');
+      document.querySelector('.lang').style.height = '145px';
+    }else{
+      childs.style.marginTop = '-80px';
+      document.querySelector('.arrow').classList.remove('rotate')
+      document.querySelector('.lang').style.height = '35px';
+    }
+  }
 }
 
 export default initial;

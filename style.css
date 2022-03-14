@@ -205,17 +205,6 @@ ul.work {
 }
 
 
-
-a.button:hover {
-  margin-top: -10px;
-  transform: scale(1.05);
-}
-
-.button:hover {
-  background-color: #396df2;
-  color: #fff;
-}
-
 .about {
   background: #e5e5e5;
 }
@@ -259,15 +248,16 @@ h3.about-title {
   margin: 10px 0;
   display: inline-block;
 }
-#social > .linkedin-icon > img{
+.linkedin-icon > img{
   width: 22px;
   height: auto;
 }
 
 .about-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   width: 30%;
+  gap:10px;
   margin: 10px 0;
 }
 
@@ -277,12 +267,18 @@ a.about-button {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
-  color: #396df2;
-  border: 1px solid #396df2;
+  background-color: #396df2;
+  color:#fff;
   padding: 12px;
   border-radius: 10px;
   display: inline-block;
   margin-top: 14px;
+}
+.about-button:hover{
+  background-color: #7f8cff;
+}
+.about-button:active{
+  transform: scale(.98);
 }
 
 .technologies {
@@ -295,10 +291,13 @@ a.about-button {
 .title {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #000;
+  z-index: 10;
+  background-color: #fff;
 }
 
 .skills,
@@ -312,13 +311,19 @@ a.about-button {
   flex-direction: column;
   justify-content: space-around;
   height: 70%;
+  position: absolute;
+  margin-top: -80px;
+  transition: all 1s ease;
+  z-index: 0;
 }
 
 .lang {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 350px;
+  justify-content: start;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .child-lang {
@@ -336,8 +341,10 @@ a.about-button {
 .child-lang > :nth-child(2) {
   margin-left: 10px;
 }
-
-.arrow {
+.arrow{
+  transition: all 0.5s ease;
+}
+.rotate {
   transform: rotate(90deg);
 }
 
@@ -548,10 +555,6 @@ a.about-button {
 
   ul.navbar > li > a:hover {
     color: #6070ff;
-  }
-
-  .lang {
-    height: 195px;
   }
 
   .child-langs {
