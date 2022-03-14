@@ -118,8 +118,10 @@ i.icon-element {
   width: 100%;
 }
 .title-project{
-  height: 65px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 65px;
 }
 .title-project > p {
   margin:5px 10px;
