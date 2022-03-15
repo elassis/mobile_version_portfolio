@@ -6,8 +6,10 @@ document.addEventListener('click',(e)=>{
     initial.addClass(e);
     initial.showProjects(e.target.id);
   }else if(e.target.id === 'menu-button'){
-    initial.showMenu();
+    initial.togglePopUp();
   }else if(e.target.classList.contains('arrow')){
     initial.showLang(e);
+  }else if(e.target.classList.contains('pp-bg') || e.target.id ==='popup-link'){
+    initial.togglePopUp();
   }
 });

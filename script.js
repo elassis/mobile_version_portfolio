@@ -56,6 +56,7 @@ let projects = [
 const initial = {
   showAll:()=>{
     initial.showProjects('all');
+    initial.showMenu();
   },
   addClass:(e)=>{
     e.target.classList.add('selected');
@@ -107,7 +108,11 @@ const initial = {
   showMenu:()=>{
     let mobileMenu = `<div class="pp-bg">
     <div class="pp-body">
-      <p>here</p>
+      <ul class="container">
+        <li><a id="popup-link" href="#work">portfolio</a></li>
+        <li><a id="popup-link" href="#contact">contact</a></li>
+        <li><a id="popup-link" href="#about">about</a></li>
+      </ul>
     </div>
   </div>`;
   document.body.innerHTML+= mobileMenu;
@@ -116,6 +121,9 @@ const initial = {
     e.target.classList.toggle('rotate');
     e.path[2].childNodes[3].classList.toggle('showUp');
     e.path[2].classList.toggle('expand');    
+  },
+  togglePopUp:()=>{
+    document.querySelector('.pp-bg').classList.toggle('display');
   }
 }
 

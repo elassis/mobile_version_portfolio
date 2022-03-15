@@ -196,14 +196,6 @@ ul.work {
   padding: 25px 0 50px 0;
   background: #e5e5e5;
 }
-.popup-img > img {
-  width: 100%;
-  display: block;
-  height: auto;
-  margin: 10px auto;
-  transition: all 1s ease-in-out;
-}
-
 
 .about {
   background: #e5e5e5;
@@ -300,15 +292,9 @@ a.about-button {
   background-color: #fff;
 }
 
-.skills,
-.frameworks {
-  padding: 20px 0;
-  border-bottom: 1px solid #dfe1e6;
-}
-
 .child-langs {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   height: 70%;
   position: absolute;
@@ -337,8 +323,8 @@ a.about-button {
 
 .child-lang {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: column;
   border-radius: 8px;
   font-weight: 500;
   font-size: 15px;
@@ -348,6 +334,12 @@ a.about-button {
 .child-lang > img {
   width: 52px;
   height: auto;
+}
+#php-img {
+  width: 65px;
+}
+#mysql-img{
+  width: 75px;
 }
 .arrow{
   color:grey;
@@ -490,46 +482,34 @@ a.about-button {
 .pp-bg {
   position: absolute;
   top: 0;
+  right: 3000px;
   width: 100vw;
   height: 100vh;
   background-color: #7f8cffb3;
   backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 95%;
-  padding: 16px;
-  height: auto;
-  background-color: white;
-  border-radius: 16px;
-  border: 1px solid #dfe1e6;
+  height: 50vh;
+  justify-content: center;
+ padding: 0px 10px;
+}
+.container > li {
+  font-size: 25px;
+  color: #fff;
+  border-bottom: 1px solid;
+  width: 100%;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.container > li > a:visited {
+  text-decoration: none;
+  color: #fff;
 }
 
-.first-row {
-  display: flex;
-}
-
-.last-row {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.second-text-popup {
-  font-size: 15px;
-}
-
-.second-part {
-  display: none;
-}
-
-.popup-button {
-  padding: 10px !important;
-  text-align: center;
-}
 
 @media only screen and (min-width: 600px) {
   .nav {
@@ -605,7 +585,7 @@ a.about-button {
 }
 
 .display {
-  display: none;
+  right: 0px;
 }
 
 @media only screen and (min-width: 768px) {
