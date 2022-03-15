@@ -561,6 +561,7 @@ a.about-button {
     color: #344563;
     text-transform: capitalize;
     text-decoration: none;
+    z-index: 1000;
   }
 
   ul.navbar > li > a:hover {

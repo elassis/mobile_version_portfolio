@@ -23,7 +23,7 @@ let projects = [
     technologies:['rails-icon.png','posgresql-icon.jpg','html-icon.png'],
     categories:['ror','all'],
     liveUrl:'https://enigmatic-escarpment-64320.herokuapp.com/users/sign_in',
-    githubUrl:'github-urlhttps://github.com/LOctavio/rails_recipe_site'
+    githubUrl:'https://github.com/LOctavio/rails_recipe_site'
   },
   {
     title:'rockets/missions reservations',
