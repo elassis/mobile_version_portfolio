@@ -1,282 +1,122 @@
-function showMenu() {
-  const menu = document.querySelector('#mobile-menu');
+let projects = [
+  {
+    title:'car booking application',
+    description:"web app where the user can rent cars per hour. in this project I've used react in the frontend and ruby on rails in the backend as a remote rest api.",
+    technologies:['rails-icon.png','react-icon.png','posgresql-icon.jpg'],
+    categories:['ror','react','all'],
+    liveUrl:'https://final-capstone-project-r.netlify.app/login',
+    githubUrl:'https://github.com/lfmnovaes/car-rental-back-end'
+  },
+  {
+    title:'rails budget application',
+    description:'web app where the user can track their expenses and organize it by categories, i developed this app completely with ruby on rails and postgresql as database.',
+    image:'url',
+    technologies:['rails-icon.png','posgresql-icon.jpg','html-icon.png'],
+    categories:['ror','all'],
+    liveUrl:'https://calm-thicket-74866.herokuapp.com/',
+    githubUrl:'https://github.com/elassis/rails_budget_app'
+  },
+  {
+    title:'recipes social network',
+    description:'a website where user can create recipes and also share it with other users, user will be able to delete and add as much recipes and food as they want.',
+    image:'url',
+    technologies:['rails-icon.png','posgresql-icon.jpg','html-icon.png'],
+    categories:['ror','all'],
+    liveUrl:'https://enigmatic-escarpment-64320.herokuapp.com/users/sign_in',
+    githubUrl:'github-urlhttps://github.com/LOctavio/rails_recipe_site'
+  },
+  {
+    title:'rockets/missions reservations',
+    description:'web application where the user is able to reserve rockets and missions, this application consumes information from the space x remote api.',
+    technologies:['js-icon.png','react-icon.png','redux-icon.png'],
+    categories:['react','all'],
+    liveUrl:'https://react-redux-capstone-jose-enmanuel.netlify.app/rockets',
+    githubUrl:'https://github.com/elassis/react-redux-capstone'
+  },
+  {
+    title:'live statistics about covid-19',
+    description:'a website where users can have live statistical information about covid-19 sorted by country. this information is retrieve from a public API called Narrativa. ',
+    image:'url',
+    technologies:['js-icon.png','react-icon.png','redux-icon.png'],
+    categories:['react','all'],
+    liveUrl:'https://m3-capstone-microverse.netlify.app/',
+    githubUrl:'https://github.com/elassis/module-3-final-project'
+  },
+  {
+    title:'comment on tv shows website',
+    description:'a website where users can add a comment to the displayed show. this website was made with webpack and consumes data from two remote rest APIs.',
+    image:'url',
+    technologies:['js-icon.png','css-icon.png','html-icon.png'],
+    categories:['all'],
+    liveUrl:'https://elassis.github.io/module-2-capstone/dist/',
+    githubUrl:'https://github.com/elassis/module-2-capstone'
+  },
+]
 
-  if (menu.classList.contains('display')) {
-    menu.classList.remove('display');
-  } else {
-    menu.classList.add('display');
+const initial = {
+  showAll:()=>{
+    initial.showProjects('all');
+  },
+  addClass:(e)=>{
+    e.target.classList.add('selected');
+    e.path[1].childNodes.forEach((c)=>{
+      if(c.id !== e.target.id && c.className === 'selected') c.classList.remove('selected');
+    });
+  },
+  showProjects:(categorie)=>{
+    document.querySelector('#work').innerHTML = "";
+      projects.map((obj)=>{
+        if(obj.categories.includes(categorie)){
+          initial.projectTemplate(obj);
+        }
+      });
+  },
+  projectTemplate:(obj)=>{
+    let container = document.querySelector('#work');
+    let template = ` <li class="project-box">
+    <div class="featured-tech">
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[0]}"/>
+      </div>
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[1]}"/>
+      </div>
+      <div class="tech-icons">
+        <img src="./elements/${obj.technologies[2]}"/>
+      </div>
+    </div>
+    <div class="data">
+      <div class="title-project">
+        <p>${obj.title}</p>
+      </div>
+      <div class="description-project">
+        <p>${obj.description}</p>
+      </div>
+      <div class="frameworks-project">
+        <a href="${obj.githubUrl}">
+          <img class="links" src="./elements/pop-btn-2.png"/>
+        </a>
+        <a href="${obj.liveUrl}">
+          <img class="links" src="./elements/pop-btn-1.png"/>
+        </a>
+      </div>
+    </div>
+  </li>`;
+  container.innerHTML += template;
+  },
+  showMenu:()=>{
+    let mobileMenu = `<div class="pp-bg">
+    <div class="pp-body">
+      <p>here</p>
+    </div>
+  </div>`;
+  document.body.innerHTML+= mobileMenu;
+  },
+  showLang:(e)=>{
+    e.target.classList.toggle('rotate');
+    e.path[2].childNodes[3].classList.toggle('showUp');
+    e.path[2].classList.toggle('expand');    
   }
 }
 
-const array = [
-  myObj1 = {
-    id: 0,
-    title: 'Ruby on Rails Budget Web App',
-    devType:'Front end / Back end',
-    devTools:['Ruby','Rails','JavaScript'],
-    imgSrc: 'elements/cropped-ruby-budget-1.png',
-    imgAlt: 'image-project-budget',
-    metaDescription: 'Web application where the user can track their daily expenses and sort it by categories.',
-    linkGithub:'https://github.com/elassis/rails_budget_app',
-    linkLive:'https://protected-anchorage-45932.herokuapp.com/'
-  },
-  myObj2 = {
-    id: 1,
-    title: 'React Math Website',
-    devTools:['React','JavaScript','HTML'],
-    devType:'Front end',
-    imgSrc: 'elements/snapshoot-4.png',
-    imgAlt: 'image-project-4',
-    metaDescription: 'This is a website  of privately personalized reads no accounts or sign-ups required.',
-  },
-  myObj3 = {
-    id: 2,
-    title: 'To do List Project',
-    devType:'Back end',
-    devTools:['JavaScript','HTML','CSS'],
-    imgSrc: 'elements/screenShot-toDoList.jpg',
-    imgAlt: 'image-todolist',
-    metaDescription: 'To do list able to add, remove, edit and save in browser the tasks.',
-    linkGithub:'https://github.com/elassis/webpack_project',
-    linkLive:'https://elassis.github.io/webpack_project/'
-  },
-  myObj4 = {
-    id: 3,
-    title: 'Doctor Profile Layout',
-    devType:'Front end',
-    devTools:['JavaScript','HTML','CSS'],
-    imgSrc: 'elements/screenShot-doctor.jpg',
-    imgAlt: 'image-project-2',
-    metaDescription: 'A frontend layout update to the doctor profile of sodenn.com page',
-    linkGithub:'https://github.com/elassis/sodenn-doctor-profile',
-    linkLive:'https://elassis.github.io/sodenn-doctor-profile/'
-  },
-];
-
-function showProjects(obj) {
-  const projectSection = document.querySelector('#work');
-  const projectContainer = document.createElement('li');
-  const featuredImage = document.createElement('img');
-  const projectSubcontainer = document.createElement('div');
-  const projectTitle = document.createElement('h2');
-  const projectMeta = document.createElement('div');
-  const metaText1 = document.createElement('p');
-  const metaText2 = document.createElement('p');
-  const metaText3 = document.createElement('p');
-  const separator1 = document.createElement('img');
-  const separator2 = document.createElement('img');
-  const metaDescriptionText = document.createElement('p');
-  const toolsContainer = document.createElement('ul');
-  const tool1 = document.createElement('li');
-  const tool2 = document.createElement('li');
-  const tool3 = document.createElement('li');
-  const projectButton = document.createElement('a');
-
-  projectContainer.setAttribute('class', 'project');
-  featuredImage.setAttribute('alt', obj.imgAlt);
-  featuredImage.setAttribute('src', obj.imgSrc);
-  projectSubcontainer.setAttribute('class', 'project-info');
-  projectTitle.setAttribute('class', 'project-name');
-  projectTitle.innerText = obj.title;
-  projectMeta.setAttribute('class', 'meta');
-  metaText1.innerText = obj.devTools[0];
-  metaText2.innerText = obj.devType;
-  metaText3.innerText = '2021';
-  separator1.setAttribute('src', 'elements/counter.png');
-  separator1.setAttribute('alt', 'separator-dots');
-  separator2.setAttribute('src', 'elements/counter.png');
-  separator2.setAttribute('alt', 'separator-dots');
-  metaDescriptionText.setAttribute('class', 'second-text');
-  metaDescriptionText.innerText = obj.metaDescription;
-  toolsContainer.setAttribute('class', 'tools');
-  tool1.innerText = obj.devTools[0];
-  tool2.innerText = obj.devTools[1];
-  tool3.innerText = obj.devTools[2];
-  projectButton.setAttribute('class', 'button');
-  projectButton.setAttribute('onclick', `showPopup(${obj.id})`);
-  projectButton.innerText = 'see project';
-
-  projectMeta.appendChild(metaText1);
-  projectMeta.appendChild(separator1);
-  projectMeta.appendChild(metaText2);
-  projectMeta.appendChild(separator2);
-  projectMeta.appendChild(metaText3);
-  toolsContainer.appendChild(tool1);
-  toolsContainer.appendChild(tool2);
-  toolsContainer.appendChild(tool3);
-
-  projectSubcontainer.appendChild(projectTitle);
-  projectSubcontainer.appendChild(projectMeta);
-  projectSubcontainer.appendChild(metaDescriptionText);
-  projectSubcontainer.appendChild(toolsContainer);
-  projectSubcontainer.appendChild(projectButton);
-
-  projectContainer.appendChild(featuredImage);
-  projectContainer.appendChild(projectSubcontainer);
-  projectSection.appendChild(projectContainer);
-}
-
-function showPopup(id) {
-  const projectContainer = document.querySelector('#cont-popup');
-  const projectWrapper = document.querySelector('#container');
-  const projectSqueleton = document.createElement('ul');
-  const rowTitle = document.createElement('li');
-  const rowMeta = document.createElement('li');
-  const rowImg = document.createElement('li');
-  const row4 = document.createElement('li');
-  const title = document.createElement('p');
-  const closeButton = document.createElement('a');
-  const metaText1 = document.createElement('p');
-  const metaText2 = document.createElement('p');
-  const metaText3 = document.createElement('p');
-  const separator1 = document.createElement('img');
-  const separator2 = document.createElement('img');
-  const featuredImage = document.createElement('img');
-  const wrapperDesktop = document.createElement('ul');
-  const rowDesktop1 = document.createElement('li');
-  const rowDesktop2 = document.createElement('li');
-  const textDescription = document.createElement('p');
-  const secondPartText = document.createElement('span');
-  const wrapperTools = document.createElement('ul');
-  const tool1 = document.createElement('li');
-  const tool2 = document.createElement('li');
-  const tool3 = document.createElement('li');
-  const wrapperbuttons = document.createElement('ul');
-  const wrapperButton1 = document.createElement('li');
-  const wrapperButton2 = document.createElement('li');
-  const button1 = document.createElement('a');
-  const button2 = document.createElement('a');
-
-  projectWrapper.setAttribute('class', 'container');
-  rowTitle.setAttribute('class', 'first-row');
-  title.setAttribute('class', 'project-name');
-  title.innerText = array[id].title;
-  closeButton.innerText = 'x';
-  closeButton.setAttribute('onclick', 'closePopup()');
-  rowMeta.setAttribute('class', 'meta');
-  metaText1.innerText = array[id].devTools[0];
-  separator1.setAttribute('src', 'elements/counter.png');
-  separator2.setAttribute('src', 'elements/counter.png');
-  metaText2.innerText = array[id].devType;
-  metaText3.innerText = '2021';
-  rowImg.setAttribute('class', 'popup-img');
-  featuredImage.setAttribute('src', array[id].imgSrc);
-  featuredImage.setAttribute('alt', array[id].imgAlt);
-  wrapperDesktop.setAttribute('class', 'desktop-layout');
-  textDescription.setAttribute('class', 'second-text secont-text-popup');
-  textDescription.innerText = array[id].metaDescription;
-  secondPartText.setAttribute('class', 'second-part');
-  secondPartText.innerText = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
-  rowDesktop2.setAttribute('class', 'second-child');
-  wrapperTools.setAttribute('class', 'tools');
-  tool1.innerText = array[id].devTools[0];
-  tool2.innerText = array[id].devTools[1];
-  tool3.innerText = array[id].devTools[2];
-  wrapperbuttons.setAttribute('class', 'last-row');
-  button1.setAttribute('id', 'desktop-button1');
-  button1.setAttribute('class', 'button popup-button');
-  button1.setAttribute('href',array[id].linkLive);
-  button1.innerText = 'see live';
-  button2.setAttribute('id', 'desktop-button2');
-  button2.setAttribute('class', 'button popup-button');
-  button2.setAttribute('href',array[id].linkGithub);
-  button2.innerText = 'see source';
-
-  rowTitle.appendChild(title);
-  rowTitle.appendChild(closeButton);
-
-  rowMeta.appendChild(metaText1);
-  rowMeta.appendChild(separator1);
-  rowMeta.appendChild(metaText2);
-  rowMeta.appendChild(separator2);
-  rowMeta.appendChild(metaText3);
-
-  rowImg.appendChild(featuredImage);
-  rowDesktop1.appendChild(textDescription);
-
-  wrapperTools.appendChild(tool1);
-  wrapperTools.appendChild(tool2);
-  wrapperTools.appendChild(tool3);
-
-  wrapperButton1.appendChild(button1);
-  wrapperButton2.appendChild(button2);
-
-  wrapperbuttons.appendChild(wrapperButton1);
-  wrapperbuttons.appendChild(wrapperButton2);
-
-  rowDesktop2.appendChild(wrapperTools);
-  rowDesktop2.appendChild(wrapperbuttons);
-
-  wrapperDesktop.appendChild(rowDesktop1);
-  wrapperDesktop.appendChild(rowDesktop2);
-
-  row4.appendChild(wrapperDesktop);
-
-  projectSqueleton.appendChild(rowTitle);
-  projectSqueleton.appendChild(rowMeta);
-  projectSqueleton.appendChild(rowImg);
-  projectSqueleton.appendChild(row4);
-  projectWrapper.appendChild(projectSqueleton);
-  projectContainer.classList.remove('display');
-  document.documentElement.scrollTop = 0;
-}
-
-function closePopup() {
-  const container = document.querySelector('#cont-popup');
-  const subcontainer = document.querySelector('#container');
-
-  if (!container.classList.contains('display')) {
-    subcontainer.innerHTML = '';
-    container.classList.add('display');
-  }
-}
-
-// local storage code
-function getStorage() {
-  // convert the json string into js object
-  const objFinal = JSON.parse(localStorage.getItem('inputUsuario'));
-
-  document.getElementById('inputUser').value = objFinal.valorUsuario;
-  document.getElementById('inputEmail').value = objFinal.valorCorreo;
-  document.getElementById('textArea').value = objFinal.valorMessage;
-}
-function populateStorage() {
-  const form = document.getElementById('myForm');
-  const valueUser = form.elements.username.value;
-  const valueEmail = form.elements.useremail.value;
-  const valueMessage = form.elements.message.value;
-
-  const myObj = {
-    valorUsuario: valueUser,
-    valorCorreo: valueEmail,
-    valorMessage: valueMessage,
-  };
-  // convert object into JSON string and save it in one localStorage variable
-  localStorage.setItem('inputUsuario', JSON.stringify(myObj));
-}
-
-window.onload = function () {
-  showProjects(array[0]);
-  showProjects(array[1]);
-  showProjects(array[2]);
-  showProjects(array[3]);
-
-  // form validation
-  const form = document.getElementById('myForm');
-  const messageContainer = document.querySelector('#message');
-
-  form.addEventListener('submit', (event) => {
-    const { value } = form.elements.useremail;
-    const lowercaseValue = value.toLowerCase();
-
-    if (value !== lowercaseValue) {
-      event.preventDefault();
-      messageContainer.className = 'message';
-      messageContainer.innerText = 'Email must be in lower case';
-    }
-  });
-
-  // localStorage part
-
-  getStorage();
-};
+export default initial;
