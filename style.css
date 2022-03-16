@@ -5,6 +5,9 @@
   list-style-type: none;
   text-decoration: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Poppins, sans-serif;
